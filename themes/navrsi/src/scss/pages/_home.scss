@@ -1,0 +1,109 @@
+body {
+	background-color: $secondary;
+}
+.mtx {
+	// padding-top: 150px;
+	scroll-padding-bottom: 50px;
+}
+.active {
+	color: $primary;
+}
+
+.webcam img {
+	width: 50%;
+	cursor: pointer;
+	transition: all 0.5s;
+	&:hover {
+		box-shadow: 0 4px 10px rgba(0,0,0,0.8); 
+
+	}
+}
+
+.rezervace-bg {
+	background-image: url("../images/Navrsi-02.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	.container {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+  }
+
+  .form {
+	 padding-top: 18rem;
+	 padding-bottom: 18rem;
+  }
+
+
+@media (max-width: $lg) {
+	
+}
+
+@media (max-width: $md) {
+	.mtx {
+		padding-top: 0;
+	}
+	.form {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+	 }
+}
+
+@media (max-width: $sm) {
+	.section-home {
+		margin-top: 50px;
+	}
+}
+
+.icon { 
+	width: 30px; 
+	height: 30px;
+	margin: .5em;
+	fill:$primary;
+	transition: all 0.5s;
+  }
+	  .icon:hover {
+		fill:darken($primary, 10%);
+		transform: scale(1.1);
+	  }
+
+#kontakt {
+	li {
+	list-style-type: none;
+	}	  
+	ul {
+		padding: 0;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+
+#kontakt {
+	background: lighten($black, 30%);
+	color: $secondary;
+	h5 {
+		color: $primary;
+	}
+	img {
+		transition: all 1s;
+	}
+	img:hover {
+		transform: scale(1.1);
+		
+	}	
+
+}
+.footer {
+	background: lighten($black, 16%);
+	color: $secondary;
+}
+
+
+

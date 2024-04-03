@@ -1,0 +1,4 @@
+title: Galleries
+modelClass: Zed\Galleries\Models\Gallery
+toolbar:
+    buttons: reorder_toolbar

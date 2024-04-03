@@ -1,0 +1,4 @@
+title: Okoli
+modelClass: ZdenekSpisar\Okoli\Models\Okoli
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,50 @@
+[viewBag]
+
+[builderDetails]
+modelClass = "Zed\Galleries\Models\Gallery"
+identifierValue = 2
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<div class="container" id="ubytovani">
+    <div class="row">
+        <div class="col-md-12 pt-5">
+            <h1 class="text-center">{{ this.theme.accomodation_headline }}</h1>
+                <h2 class="text-center pb-3">{{ this.theme.accomodation_subheadline }}</h2>
+                    {{ this.theme.accomodation_text|raw }}
+        </div>
+        <div class="col-md-6 text-center mb-3">
+            <h3 class="pb-3">{{ this.theme.accomodation_sort_hedline }}</h3>
+                {{ this.theme.accomodation_sort | raw }}   
+        </div>
+        <div class="col-md-6 text-center">
+            <h3 class="mb-3">foto ubytovani</h3>
+
+
+
+            {% set record = builderDetails.record %}
+            {% set displayColumn = builderDetails.displayColumn %}
+            {% set notFoundMessage = builderDetails.notFoundMessage %}
+            
+            {% if record %}
+    
+            <div class="row photos">
+                         {% for image in record.image_gallery %}
+                
+                            <div class="col-4 px-0 img-hover-zoom">
+                                <a data-lightbox="photos-ubytovani" href="{{ image.path }}">
+                                    <img class="img-fluid" src="{{ image.thumb(200, 150, {'mode':'crop'}) }}" alt="Návrší ubytování" >
+                                </a>
+                            </div>  
+
+                        {% endfor %}
+
+                {% else %}
+                    {{ notFoundMessage }}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+plugin:
+    name: 'zdenekspisar.okoli::lang.plugin.name'
+    description: 'zdenekspisar.okoli::lang.plugin.description'
+    author: 'Zdenek Spisar'
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Okolí
+        url: zdenekspisar/okoli/okoli
+        icon: icon-adjust

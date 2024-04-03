@@ -1,0 +1,63 @@
+==
+<?php
+function onInit()
+{
+    $themePath = 'themes/' . $this->theme->getDirName();
+    $this->layout['styles'] = url(mix('assets/css/styles.css', $themePath));
+    $this->layout['scripts'] = url(mix('assets/js/scripts.js', $themePath));
+}
+?>
+==
+<!DOCTYPE html>
+<html lang="cs-cz">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Zdenek Spisar">
+        <meta name="generator" content="{{ this.theme.site_title }}">
+
+        <title>Restaurace a ubytování - {{ this.theme.site_title }}</title>
+
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="description" content="{{ this.page.meta_description }}">
+
+        <meta property="og:title" content="{{ this.page.meta_title }}" />
+        <meta property="og:description" content="{{ this.page.meta_description }}" />
+        <meta property="og:url" content="{{ url_current() }}" />
+        <meta property="og:image" content="{{ 'assets/images/theme-preview.png'|theme }}"/>
+        
+        
+        
+
+        <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">
+        <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">
+
+        <link href="{{ this.layout.styles }}" rel="stylesheet">
+        
+        <link rel="preload" as="font" type="font/woff2" href="{{ 'assets/fonts/montserrat-v14-latin_latin-ext-regular.woff2'|theme }}" crossorigin="anonymous">
+        <link rel="preload" as="font" type="font/woff2" href="{{ 'assets/fonts/montserrat-v14-latin_latin-ext-600.woff2'|theme }}" crossorigin="anonymous">
+        <link rel="preload" as="font" type="font/woff2" href="{{ 'assets/fonts/montserrat-v14-latin_latin-ext-800.woff2'|theme }}" crossorigin="anonymous">
+
+
+       
+        {% styles %}
+
+    </head>
+    <body id="page-top">
+
+            {% partial 'icons' %}
+
+            {% partial 'nav' %}
+
+            {% page %}
+
+            {% partial 'footer' %}
+
+     {% component 'googleTracker' %}   
+    
+     <script src="{{ this.layout.scripts }}"></script> 
+     {% framework extras %}
+     {% scripts %} 
+
+    </body>
+</html>

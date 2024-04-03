@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: Název
+        type: text
+        searchable: true
+        sortable: true

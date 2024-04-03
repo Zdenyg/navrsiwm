@@ -1,0 +1,11 @@
+name: Galleries
+modelClass: Zed\Galleries\Models\Gallery
+form: $/zed/galleries/models/gallery/fields.yaml
+defaultRedirect: zed/galleries/galleries
+create:
+    redirect: 'zed/galleries/galleries/update/:id'
+    redirectClose: zed/galleries/galleries
+update:
+    redirect: zed/galleries/galleries
+    redirectClose: zed/galleries/galleries
+preview: {  }

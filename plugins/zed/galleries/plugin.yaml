@@ -1,0 +1,11 @@
+plugin:
+    name: 'zed.galleries::lang.plugin.name'
+    description: 'zed.galleries::lang.plugin.description'
+    author: Zed
+    icon: oc-icon-file-image-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Galleries
+        url: zed/galleries/galleries
+        icon: icon-file-image-o

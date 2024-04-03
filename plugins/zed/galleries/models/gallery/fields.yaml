@@ -1,0 +1,34 @@
+fields:
+    name:
+        label: Název
+        span: left
+        type: text
+    slug:
+        label: slug
+        span: right
+        preset:
+            field: name
+            type: slug
+        type: text
+    preview:
+        label: 'Náhledový obrázek'
+        span: left
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '200'
+        imageHeight: '100'
+        type: fileupload
+    image_gallery:
+        label: 'Obrázky v galerii'
+        span: right
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '200'
+        imageHeight: '80'
+        type: fileupload

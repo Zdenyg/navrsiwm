@@ -1,0 +1,30 @@
+==
+<div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center pb-5">{{ this.theme.price_headline }}</h1>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+                
+          {% for fields in this.theme.pricebox %}
+
+        <div class="col-12 col-sm-6 col-md-3">
+          
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-uppercase text-center">{{ fields.pricebox_name }}</h5>
+              <ul class="price-list">
+                <li>Počet nocí: <strong>{{ fields.pricebox_nights }}</strong></li>
+                <li>{{ fields.pricebox_breakfast }}</li>
+               </ul>
+              <h5 class="card-price text-center">{{ fields.pricebox_price }}<span class="period">{{ fields.pricebox_curency }}</span></h5>
+            </div>
+          </div>
+        </div>
+        
+        {% endfor %}
+
+        </div>
+        </div>

@@ -1,0 +1,35 @@
+title = "Home"
+url = "/"
+layout = "default"
+meta_title = "Horská chata Návrší - Kralický Sněžník"
+meta_description = "Najdete u nás ubytování a občerstvení při cestách v okolí Kralického Sněžníku. Prvorepubliková chata s nádhernými výhledy na Jeseníky."
+is_hidden = 0
+
+[viewBag]
+
+[contactForm]
+==
+<?php
+function onStart()
+{
+    $this->page['bodyClass'] = 'home';
+}
+?>
+==
+{% partial 'paralax' %}
+
+    {% partial 'uvod' %}
+
+    {% partial 'ubytovani' %}
+    
+    {% partial 'srub' %}
+  
+    {% partial 'pricing' %}
+
+    {% partial 'rezervace' %}
+    
+    {% partial 'gallery' %}
+
+    {% partial 'okoli' %}
+                            
+    {% partial 'contact' %}

@@ -1,0 +1,55 @@
+==
+<section>
+    <div id="kontakt">
+            <div class="container py-5">
+                   
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h1>{{ this.theme.contact_heading }}</h1>
+                                    <h2 class="pb-3">{{ this.theme.contact_subheading }}</h2>  
+                                    <a class="js-scroll-trigger" href="#page-top">
+                                            <img src="{{ 'assets/images/logo-Navrsi.svg'|theme }}" alt="Návrší logo">
+                                          </a>
+                                    
+                                </div>
+                            </div>
+                       
+            <div class="row text-center pt-5">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5>Adresa</h5>
+                        <ul>
+                            <li>{{ this.theme.site_title }}</li>
+                            <li>{{ this.theme.adresa }}</li>
+                            <li>{{ this.theme.post_code }}</li>
+                        </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5>Rezervace</h5>
+                        <ul>
+                            <li><a href="tel:{{ this.theme.phone }}"><svg class="icon"><use xlink:href="#smartphone"></use></svg>{{ this.theme.phone }}</a></li>
+                          
+                            <li><a href="mailto: {{ this.theme.email }}"><svg class="icon"><use xlink:href="#mail"></use></svg> {{ this.theme.email }}</a></li>
+                        </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Otevírací doba</h5>
+                        <ul>
+                            <li>{{ this.theme.oteviraci_doba }}</li>
+                        </ul>    
+                            <h5>Provozovatel</h5>                            
+                        <ul>
+                            <li>{{ this.theme.provozovatel }}</li>
+                            <li>IČ: {{ this.theme.ico }}</li>
+                        </ul>
+                </div>              
+            </div>
+            <div class="row">
+                <ul class="mx-auto">
+                    <li>
+                        <a class="nav-icon" href="{{ this.theme.contact_facebook }}" target="_blank"><svg class="icon"><use xlink:href="#facebook"></use></svg></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

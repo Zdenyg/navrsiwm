@@ -1,0 +1,10 @@
+name: Okoli
+form: $/zdenekspisar/okoli/models/okoli/fields.yaml
+modelClass: ZdenekSpisar\Okoli\Models\Okoli
+defaultRedirect: zdenekspisar/okoli/okoli
+create:
+    redirect: 'zdenekspisar/okoli/okoli/update/:id'
+    redirectClose: zdenekspisar/okoli/okoli
+update:
+    redirect: zdenekspisar/okoli/okoli
+    redirectClose: zdenekspisar/okoli/okoli

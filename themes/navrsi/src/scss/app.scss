@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import "vendors/bootstrap";
+
+// helpers
+@import "helpers/utilities";
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// base
+@import "base/color-palette";
+@import "base/typography";
+
+// components
+@import "components/footer";
+@import "components/nav";
+@import "components/buttons";
+@import "components/paralax";
+@import "components/lightbox";
+@import "components/zedgallery";
+
+// pages
+@import "pages/home";
+
+
+
+
+
+
+
+

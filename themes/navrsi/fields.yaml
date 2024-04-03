@@ -1,0 +1,295 @@
+
+####################################################
+    # Tab: General
+####################################################
+     
+
+tabs:
+    fields:
+        info_switch:
+            tab: General
+            label: Zobrazit aktuální info
+            type: switch
+            default: false
+            span: left
+        actual_info:
+            tab: General
+            label: Aktuální informace
+            type: richeditor
+            default:
+            comment: "poznámka* používej formátování nadpisů: Hlavní sdělení - heading 2, běžný text - normal"     
+        site_title:
+            tab: General
+            label: Název
+            type: text
+            size: tiny
+            span: left
+            default: Návrší horská chata
+        phone:
+            tab: General
+            label: Telefon rezervace
+            type: text
+            size: tiny
+            span: left
+            default: +420 774 415 986
+ 
+        email:
+            tab: General
+            label: E-mail rezervace
+            type: text
+            size: tiny
+            span: left
+            default: navrsi@navrsi.eu
+
+        oteviraci_doba:
+            tab: General
+            label: Otevírací doba
+            type: textarea
+            size: tiny
+            span: left
+            default: PO - NE | 8:00 - 22:00
+        adresa:
+            tab: General
+            label: Adresa
+            type: text
+            size: tiny
+            span: left
+            default: Stříbrnice - Staré Město pod Sněžníkem
+        post_code: 
+            tab: General
+            label: PSČ
+            type: text
+            size: tiny
+            span: left
+            default: 788 32 (okres Šumperk)
+        provozovatel:
+            tab: General
+            label: Provozovatel
+            type: text
+            size: tiny
+            span: left
+            default: František Švec
+        ico:
+            tab: General
+            label: IČ
+            type: text
+            size: tiny
+            span: left
+            default: 87992124
+
+        footer:
+            tab: General
+            label: Footer
+            type: text
+            size: tiny
+            span: left
+            default: © 2020 Návrší - horská chata
+
+####################################################
+    # Tab: úvod
+####################################################
+
+        intro_headline:
+            tab: Úvod
+            label: Nadpis
+            type: text
+            size: tiny
+            span: left
+        
+        intro_subheadline:
+            tab: Úvod
+            label: Podnadpis
+            type: text
+            size: tiny
+            span: left    
+
+        intro_services: 
+            tab:  Úvod
+            prompt: Přidat položku
+            type: repeater
+            size: tiny
+            span: left 
+            form:
+                fields:
+                    intro_services_image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 80
+                        imageHeight: 80
+                        span: left
+                        filetypes: png
+                    intro_services_title:
+                        label: Title
+                        type: text
+                        span: left
+
+
+
+####################################################
+    # Tab: Ubytování
+####################################################
+
+        accomodation_headline:
+            tab: Ubytování
+            label: Nadpis
+            type: text
+            size: tiny
+            span: storm
+        accomodation_subheadline:
+            tab: Ubytování
+            label: Podnadpis
+            type: text
+            size: tiny
+            span: storm    
+        accomodation_text:
+            tab: Ubytování
+            label: Text
+            type: richeditor
+            size: small
+            span: storm    
+        accomodation_sort_hedline:
+            tab: Ubytování
+            label: Nadpis
+            type: text
+            size: tiny
+            span: storm   
+        accomodation_sort:
+            tab: Ubytování
+            label: Nabídka pokojů
+            type: richeditor
+            span: right 
+            size: small
+
+
+####################################################
+    # Tab: Srub
+####################################################
+
+        srub_headline:
+            tab: Srub
+            label: Nadpis
+            type: text
+            size: tiny
+            span: left
+        srub_text:
+            tab: Srub
+            label: Text
+            type: richeditor
+            size: large
+             
+  
+
+####################################################
+    # Tab: Ceník
+####################################################
+
+        price_headline:
+            tab: Ubytování
+            label: Ceník Nadpis
+            type: text
+            size: tiny
+            span: left
+            default: Cena Ubytování
+
+        pricebox:
+            tab: Ubytování
+            prompt: Přidat cenu
+            label: Cena 1
+            type: repeater
+            size: tiny
+            span: left
+            form:
+                fields:
+                    pricebox_name:
+                        label: Name
+                        type: text
+                        span: left
+                        default: Na přespání
+                    pricebox_nights:
+                        label: Počet nocí
+                        type: text
+                        span: left
+                    pricebox_breakfast:
+                        label: se snídaní / bez snídaně
+                        type: text
+                        span: left
+                        default: se snídaní
+                    pricebox_price:
+                        label: Cena
+                        type: text
+                        span: left
+                        default: 390,-
+                    pricebox_curency:
+                        label: Měna
+                        type: text
+                        span: left
+                        default: Kč    
+
+
+####################################################
+    # Tab: Galerie
+####################################################                        
+        gallery_headline:
+            tab: Galerie
+            label: Nadpis
+            type: text
+            size: tiny
+            span: left    
+            default: galerie 
+        gallery_subheadline:
+            tab: Galerie
+            label: Podnadpis
+            type: text
+            size: tiny
+            span: left    
+            default: okem fotografa
+
+
+
+####################################################
+    # Tab: Okolí
+####################################################
+
+
+        vicinity_headline:
+            tab: Okolí
+            label: Nadpis
+            type: text
+            size: tiny
+            span: left
+            default: 
+        vicinity_subheadline:
+            tab: Okolí
+            label: Podnadpis
+            type: text
+            size: tiny
+            span: left    
+            default: příroda v okolí Návrší
+        
+
+####################################################
+    # Tab: Kontakt
+####################################################
+
+
+        contact_heading:
+            tab: Kontakt
+            label: Nadpis
+            type: text
+            span: left
+            size: small
+        contact_subheading:
+            tab: Kontakt
+            label: Podnadpis
+            type: text
+            span: left
+            size: small
+
+        contact_facebook:
+            tab: Kontakt
+            label: Facebook link
+            type: text
+            span: right
+            default: https://facebook.com
+            comment: Leave empty for hide icon

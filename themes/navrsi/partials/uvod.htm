@@ -1,0 +1,71 @@
+[viewBag]
+==
+<section class="uvod">
+  <div class="container">
+      <div class="row justify-content-md-center py-5">
+          <div class="col col-md-6">
+            
+            {% if this.theme.info_switch %}
+ 
+            <h1 class="text-center">Aktuální informace</h1>
+                {{ this.theme.actual_info | raw }}
+            <hr>
+            {% endif %}
+
+          </div>
+      </div>
+    <div class="row">
+      <div class="col-md text-center">
+        <h1>{{ this.theme.intro_headline }}</h1>
+        <h2>{{ this.theme.intro_subheadline }}</h2>
+
+        <div class="row py-5">
+            {% for fields in this.theme.intro_services %}
+          <div class="col-sm-4 col-6 text-center">
+            <img src="{{ fields.intro_services_image | media }}" alt="">
+                <p>{{ fields.intro_services_title }}</p>
+          </div>
+          {% endfor %}
+          </div>
+            <h3>otevírací doba</h3>
+            <h2>{{ this.theme.oteviraci_doba }}</h2>
+      </div>
+
+      <div class="col-md text-center py-5">
+        <h1>aktuální počasí</h1>
+          <div class="weather p-3">
+            {% partial 'weather' %}
+          </div>
+          <div class="webcamera">
+        <h1 class="text-center py-3">webkamera</h1>
+           <div class="webcam d-inline-block" data-toggle="modal" data-target="#webcamModal">
+               <img class="NO-CACHE" src="https://kamera.navrsi.eu/hdcam.jpg" alt="webkamera Návrší">
+           </div>
+            <div class="modal fade" id="webcamModal" tabindex="-1" role="dialog" aria-labelledby="webcamModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body w-100">
+                    <img src="https://kamera.navrsi.eu/hdcam.jpg" class="img-fluid NO-CACHE" alt="webkamera Návrší Střírnice">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+var items = document.querySelectorAll("img.NO-CACHE");
+for (var i = items.length; i--;) {
+    var img = items[i];
+    img.src = img.src + '?' + Date.now();
+}
+</script>

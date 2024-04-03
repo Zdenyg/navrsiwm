@@ -1,0 +1,60 @@
+.parallax-bg {
+    background-image: url("../images/uvodni-tiny.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+    padding-top: 70%;
+    background-repeat: no-repeat;
+    background-position-y: 55px;
+
+}
+
+.silueta {
+    background-image: url("../images/les-silueta-tiny.png");
+    background-size: cover;
+    margin-top: -20%; 
+    padding-top: 20%;
+}
+
+.call {
+    background: $black;
+    opacity: 0.8;
+    padding: 1rem 2rem;
+    width: 30%;
+    position: absolute;
+    top: 34%;
+    right: 10%;
+
+    h1 {
+        font-size: 1.8rem;
+    }
+    p {
+        color: $secondary;
+        padding-bottom: 1rem;
+    }
+    .btn-rouded {
+        padding: 0.5rem;
+
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+}
+
+
+@media (max-width: $xl) {
+	.call {
+        top: 20%;  
+    }
+}
+
+@media (max-width: $md) {
+
+
+     }
+
+@media (max-width: $sm) {
+
+}
